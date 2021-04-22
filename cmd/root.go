@@ -2,16 +2,7 @@ package cmd
 
 import (
 	"fmt"
-	"github.com/deviceinsight/kafkactl/cmd/alter"
-	"github.com/deviceinsight/kafkactl/cmd/attach"
-	"github.com/deviceinsight/kafkactl/cmd/config"
-	"github.com/deviceinsight/kafkactl/cmd/consume"
-	"github.com/deviceinsight/kafkactl/cmd/create"
-	"github.com/deviceinsight/kafkactl/cmd/deletion"
-	"github.com/deviceinsight/kafkactl/cmd/describe"
 	"github.com/deviceinsight/kafkactl/cmd/get"
-	"github.com/deviceinsight/kafkactl/cmd/produce"
-	"github.com/deviceinsight/kafkactl/cmd/reset"
 	"github.com/deviceinsight/kafkactl/operations/k8s"
 	"github.com/deviceinsight/kafkactl/output"
 	"github.com/pkg/errors"
@@ -55,19 +46,19 @@ func NewKafkactlCommand(streams output.IOStreams) *cobra.Command {
 
 	cobra.OnInitialize(initConfig)
 
-	rootCmd.AddCommand(config.NewConfigCmd())
-	rootCmd.AddCommand(consume.NewConsumeCmd())
-	rootCmd.AddCommand(create.NewCreateCmd())
-	rootCmd.AddCommand(alter.NewAlterCmd())
-	rootCmd.AddCommand(deletion.NewDeleteCmd())
-	rootCmd.AddCommand(describe.NewDescribeCmd())
+	//rootCmd.AddCommand(config.NewConfigCmd())
+	//rootCmd.AddCommand(consume.NewConsumeCmd())
+	//rootCmd.AddCommand(create.NewCreateCmd())
+	//rootCmd.AddCommand(alter.NewAlterCmd())
+	//rootCmd.AddCommand(deletion.NewDeleteCmd())
+	//rootCmd.AddCommand(describe.NewDescribeCmd())
 	rootCmd.AddCommand(get.NewGetCmd())
-	rootCmd.AddCommand(produce.NewProduceCmd())
-	rootCmd.AddCommand(reset.NewResetCmd())
-	rootCmd.AddCommand(attach.NewAttachCmd())
-	rootCmd.AddCommand(newCompletionCmd())
-	rootCmd.AddCommand(newVersionCmd())
-	rootCmd.AddCommand(newDocsCmd())
+	//rootCmd.AddCommand(produce.NewProduceCmd())
+	//rootCmd.AddCommand(reset.NewResetCmd())
+	//rootCmd.AddCommand(attach.NewAttachCmd())
+	//rootCmd.AddCommand(newCompletionCmd())
+	//rootCmd.AddCommand(newVersionCmd())
+	//rootCmd.AddCommand(newDocsCmd())
 
 	// use upper-case letters for shorthand params to avoid conflicts with local flags
 	rootCmd.PersistentFlags().StringVarP(&cfgFile, "config-file", "C", "", fmt.Sprintf("config file. one of: %v", configPaths))

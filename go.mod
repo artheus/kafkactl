@@ -5,6 +5,7 @@ require (
 	github.com/Shopify/sarama v1.27.0
 	github.com/fsnotify/fsnotify v1.4.9 // indirect
 	github.com/golang/snappy v0.0.2 // indirect
+	github.com/google/go-cmp v0.5.5 // indirect
 	github.com/klauspost/compress v1.11.0 // indirect
 	github.com/landoop/schema-registry v0.0.0-20190327143759-50a5701c1891
 	github.com/linkedin/goavro/v2 v2.10.0
@@ -22,10 +23,10 @@ require (
 	go.uber.org/atomic v1.5.1 // indirect
 	go.uber.org/ratelimit v0.1.0
 	golang.org/x/crypto v0.0.0-20200820211705-5c72a883971a // indirect
+	golang.org/x/tools v0.1.0 // indirect
 	gopkg.in/errgo.v2 v2.1.0
 	gopkg.in/ini.v1 v1.61.0 // indirect
 	gopkg.in/yaml.v2 v2.3.0
-	gotest.tools/gotestsum v1.6.3 // indirect
 )
 
 go 1.16
